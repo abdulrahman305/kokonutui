@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
     Rocket,
     Code,
@@ -18,17 +17,17 @@ import {
     CheckCheck,
     XCircle,
 } from "lucide-react";
+import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import V0 from "@/components/icons/v0";
 import TailwindCSS from "@/components/icons/tailwindcss";
 import Motion from "@/components/icons/motion";
-import { useActionState, useState, useRef } from "react";
+import { useActionState, useState } from "react";
 import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog";
@@ -808,7 +807,7 @@ function Checkmark({
                 cy="50"
                 r="40"
                 stroke={color}
-                variants={draw}
+                variants={draw as any}
                 custom={0}
                 style={{
                     strokeWidth,
@@ -819,7 +818,7 @@ function Checkmark({
             <motion.path
                 d="M30 50L45 65L70 35"
                 stroke={color}
-                variants={draw}
+                variants={draw as any}
                 custom={1}
                 style={{
                     strokeWidth,

@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
 import { cn } from "@/lib/utils";
 import { META_THEME_COLORS, siteConfig } from "@/config/site";
 import { RootProvider } from "fumadocs-ui/provider";
-import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ViewTransitions } from "next-view-transitions";
+import { Geist } from "next/font/google";
 
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
+const geist = Geist({
+    subsets: ["latin"],
+    variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
@@ -26,8 +25,8 @@ export const metadata: Metadata = {
         "Tailwind CSS",
         "Next.js",
         "shadcn",
-        "Framer Motion",
-        "React Library",
+        "motion",
+        "react design",
     ],
     robots: "index, follow",
     authors: [{ name: "Dorian Baffier", url: "https://x.com/dorian_baffier" }],
@@ -47,10 +46,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-    themeColor: META_THEME_COLORS.dark,
+    themeColor: [
+        {
+            media: "(prefers-color-scheme: light)",
+            color: META_THEME_COLORS.light,
+        },
+        {
+            media: "(prefers-color-scheme: dark)",
+            color: META_THEME_COLORS.dark,
+        },
+    ],
 };
-
-const dev = process.env.NODE_ENV === "development";
 
 export default function RootLayout({
     children,
@@ -62,8 +68,8 @@ export default function RootLayout({
             <html lang="en" suppressHydrationWarning>
                 <body
                     className={cn(
-                        geistSans.variable,
-                        geistSans.className,
+                        geist.variable,
+                        geist.className,
                         "antialiased"
                     )}
                 >
@@ -80,13 +86,7 @@ export default function RootLayout({
                         </ThemeProvider>
                     </RootProvider>
                     <Analytics />
-                    {/* {!dev && (
-                        <Script
-                            defer
-                            src="https://cloud.umami.is/script.js"
-                            data-website-id="edae968b-0879-4fd7-a6e8-50409c8e6131"
-                        />
-                    )} */}
+                    <SpeedInsights />
                 </body>
             </html>
         </ViewTransitions>

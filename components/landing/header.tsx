@@ -19,25 +19,25 @@ export function Header() {
                 >
                     <span className="flex items-center gap-2">
                         <PartyPopper className="w-3.5 h-3.5" />
-                        <span className="text-transparent bg-linear-to-r from-pink-500 via-indigo-500 to-purple-500 bg-clip-text font-semibold">
+                        <span className="text-transparent bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 bg-clip-text font-semibold">
                             Explore new components
                         </span>
                     </span>
 
                     <div className="group relative inline-flex items-center gap-2 px-3 py-1 text-sm rounded-lg bg-zinc-900 dark:bg-zinc-100 transition-colors">
-                        <div className="absolute inset-0 rounded-lg bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-40 group-hover:opacity-80 blur-sm transition-opacity duration-500" />
-                        <div className="relative">
+                        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 opacity-40 group-hover:opacity-80 blur-sm transition-opacity duration-500" />
+                        <div className="relative z-10 flex items-center gap-2">
                             <span className="text-white dark:text-zinc-900">
                                 KokonutUI Pro
                             </span>
+                            <ArrowUpRight className="w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />
                         </div>
-                        <ArrowUpRight className="relative w-3.5 h-3.5 text-white/90 dark:text-zinc-900/90" />
                     </div>
                 </Link>
             </div>
 
             <div className="sticky top-0 left-0 right-0 z-50">
-                <div className="bg-white dark:bg-black/5 w-full">
+                <div className="bg-white dark:bg-black w-full">
                     {/* Rest of the header content */}
                     <div className="flex items-center justify-center w-full flex-col">
                         <div
@@ -47,11 +47,11 @@ export function Header() {
                             dark:from-zinc-900/90 dark:via-zinc-800/90 dark:to-zinc-900/90
                             shadow-[0_2px_20px_-2px_rgba(0,0,0,0.1)]
                             backdrop-blur-md
-                            border-x border-b 
+                            border 
                             border-[rgba(230,230,230,0.7)] dark:border-[rgba(70,70,70,0.7)]
-                            w-full sm:min-w-[800px] sm:max-w-[1200px]
-                            rounded-b-[28px]
-                            px-4 py-2.5
+                            w-[95%] sm:min-w-[800px] sm:max-w-[1200px]
+                            rounded-xl
+                            px-4 py-2 mt-2 md:mt-4 
                             relative
                             transition-all duration-300 ease-in-out
                         `}
@@ -66,19 +66,19 @@ export function Header() {
                                         <Image
                                             src="/logo.svg"
                                             alt="logo"
-                                            width={32}
-                                            height={32}
+                                            width={28}
+                                            height={28}
                                             className="hidden dark:block"
                                         />
                                         <Image
                                             src="/logo-black.svg"
                                             alt="logo"
-                                            width={32}
-                                            height={32}
+                                            width={28}
+                                            height={28}
                                             className="block dark:hidden"
                                         />
                                         <span className="hidden sm:block font-semibold">
-                                            kokonutUI
+                                            kokonut UI
                                         </span>
                                     </Link>
                                     <span className="text-zinc-300 dark:text-zinc-700">
@@ -87,16 +87,10 @@ export function Header() {
                                     {/* Desktop Navigation Links */}
                                     <div className="hidden sm:flex items-center gap-4">
                                         <ViewTransitionsLink
-                                            href="/docs/components/background-paths"
+                                            href="/docs/components/action-search-bar"
                                             className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                                         >
                                             Components
-                                        </ViewTransitionsLink>
-                                        <ViewTransitionsLink
-                                            href="/pricing"
-                                            className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
-                                        >
-                                            Pricing
                                         </ViewTransitionsLink>
                                         <Link
                                             href="https://kokonutui.pro/templates?utm_source=kokonutui.com&utm_medium=header"
@@ -104,7 +98,7 @@ export function Header() {
                                             className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors flex items-center gap-2"
                                         >
                                             Templates
-                                            <span className="text-purple-500 dark:text-purple-400 border border-purple-500 dark:border-purple-400 rounded-lg px-1 py-0.5 text-xs">
+                                            <span className="text-orange-500 dark:text-orange-400 border border-orange-500 dark:border-orange-400 rounded-md px-1 py-0.5 text-xs">
                                                 New
                                             </span>
                                         </Link>
@@ -129,10 +123,11 @@ export function Header() {
                                         Components
                                     </ViewTransitionsLink>
                                     <ViewTransitionsLink
-                                        href="/pricing"
+                                        href="https://kokonutui.pro/templates?utm_source=kokonutui.com&utm_medium=header"
+                                        target="_blank"
                                         className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                                     >
-                                        Pricing
+                                        Templates
                                     </ViewTransitionsLink>
                                     <ThemeToggle />
                                 </div>

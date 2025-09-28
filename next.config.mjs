@@ -29,6 +29,25 @@ const nextConfig = {
             },
         ];
     },
+    async redirects() {
+        return [
+            {
+                source: "/components",
+                destination: "/docs/components/liquid-glass-card",
+                permanent: true,
+            },
+            {
+                source: "/components/:path*",
+                destination: "/docs/components/:path*",
+                permanent: true,
+            },
+            {
+                source: "/r/:path([^.]*)",
+                destination: "/r/:path.json",
+                permanent: true,
+            }
+        ];
+    },
     images: {
         remotePatterns: [
             {

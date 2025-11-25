@@ -102,11 +102,7 @@ export function Checkmark({
 
 export default function CurrencyTransfer() {
     const [isCompleted, setIsCompleted] = useState(false);
-    const timestamp = new Date().toLocaleString();
-    const transactionId = `TXN-${Math.random()
-        .toString(36)
-        .substr(2, 9)
-        .toUpperCase()}`;
+    const transactionId = "TXN-DAB3UL494";
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -610,7 +606,7 @@ export default function CurrencyTransfer() {
                                     <TooltipContent>
                                         <p className="text-xs">
                                             {isCompleted
-                                                ? `Rate updated at ${timestamp}`
+                                                ? `Rate updated at 10:45 AM`
                                                 : "Please wait..."}
                                         </p>
                                     </TooltipContent>

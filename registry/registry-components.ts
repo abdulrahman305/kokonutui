@@ -172,6 +172,18 @@ export const component: Registry = [
     ],
   },
   {
+    name: "mouse-effect-card",
+    type: "registry:component",
+    dependencies: ["motion"],
+    registryDependencies: ["card", "button"],
+    files: [
+      {
+        path: "components/kokonutui/mouse-effect-card.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "beams-background",
     type: "registry:component",
     dependencies: ["motion"],
@@ -515,6 +527,18 @@ export const component: Registry = [
     files: [
       {
         path: "components/kokonutui/loader.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "slide-text-button",
+    type: "registry:component",
+    dependencies: ["motion"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "components/kokonutui/slide-text-button.tsx",
         type: "registry:component",
       },
     ],

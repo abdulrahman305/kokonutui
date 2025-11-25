@@ -11,7 +11,7 @@
 
 @import "tw-animate-css";
 
-@source '../node_modules/fumadocs-ui/dist/**/*.js';
+@source "../node_modules/fumadocs-ui/dist/**/*.js";
 
 @theme {
   --color-background: var(--background);
@@ -201,7 +201,8 @@ button {
 
 /* New badge styling */
 a[href="/docs/components/profile-dropdown"]::after,
-a[href="/docs/components/loader"]::after {
+a[href="/docs/components/slide-text-button"]::after,
+a[href="/docs/components/mouse-effect-card"]::after {
   content: "New";
   position: absolute;
   right: 0.2rem;
@@ -222,7 +223,8 @@ a[href="https://kokonutui.pro/templates#futur"] svg,
 a[href="https://kokonutui.pro/templates#postly"] svg,
 a[href="https://kokonutui.pro/templates#startup"] svg,
 a[href="https://kokonutui.pro/templates#grace"] svg,
-a[href="https://kokonutui.pro/templates#sonae"] svg {
+a[href="https://kokonutui.pro/templates#sonae"] svg,
+a[href="https://kokonutui.pro/templates#lume"] svg {
   display: none;
 }
 
@@ -231,7 +233,8 @@ a[href="https://kokonutui.pro/templates#ai"]::after,
 a[href="https://kokonutui.pro/templates#futur"]::after,
 a[href="https://kokonutui.pro/templates#postly"]::after,
 a[href="https://kokonutui.pro/templates#startup"]::after,
-a[href="https://kokonutui.pro/templates#grace"]::after {
+a[href="https://kokonutui.pro/templates#grace"]::after,
+a[href="https://kokonutui.pro/templates#lume"]::after {
   content: "Pro";
   position: absolute;
   right: 2.7rem;
@@ -257,7 +260,8 @@ a[href="https://kokonutui.pro/templates#futur"]::after,
 a[href="https://kokonutui.pro/templates#postly"]::after,
 a[href="https://kokonutui.pro/templates#startup"]::after,
 a[href="https://kokonutui.pro/templates#grace"]::after,
-a[href="https://kokonutui.pro/templates#sonae"]::after {
+a[href="https://kokonutui.pro/templates#sonae"]::after,
+a[href="https://kokonutui.pro/templates#lume"]::after {
   content: "Pro";
   position: absolute;
   right: 0rem;
@@ -280,7 +284,8 @@ a[href="https://kokonutui.pro/templates#sonae"]::after {
 
 /* Dark mode adjustments */
 .dark a[href="/docs/components/profile-dropdown"]::after,
-.dark a[href="/docs/components/loader"]::after {
+.dark a[href="/docs/components/slide-text-button"]::after,
+.dark a[href="/docs/components/mouse-effect-card"]::after {
   background-color: rgba(52, 211, 153, 0.2);
   color: rgb(16, 185, 129);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -291,6 +296,7 @@ a[href="https://kokonutui.pro/templates#sonae"]::after {
 .dark a[href="https://kokonutui.pro/templates#postly"]::after,
 .dark a[href="https://kokonutui.pro/templates#startup"]::after,
 .dark a[href="https://kokonutui.pro/templates#grace"]::after,
+.dark a[href="https://kokonutui.pro/templates#lume"]::after,
 .dark a[href="https://kokonutui.pro/templates#sonae"]::after {
   background-color: rgba(255, 165, 0, 0.2);
   color: #ffa500;

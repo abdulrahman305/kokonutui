@@ -50,6 +50,12 @@ export async function Header() {
                   >
                     Templates
                   </Link>
+                  <ViewTransitionsLink
+                    className="flex items-center gap-1 rounded-lg px-3 py-1 font-medium text-[15px] text-black/80 tracking-tighter transition-all duration-200 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/5"
+                    href="/#testimonials"
+                  >
+                    Testimonials
+                  </ViewTransitionsLink>
                 </div>
               </div>
 
